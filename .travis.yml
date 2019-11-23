@@ -1,6 +1,6 @@
 os: windows
 language: shell
 script:
-  - choco install -fdv dvc.nuspec
+  - choco install dvc -dv -s .
   - dvc version
   - choco uninstall -fdv dvc.nuspec
