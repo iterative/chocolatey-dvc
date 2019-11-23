@@ -1,7 +1,7 @@
 os: windows
 language: shell
 script:
-  - choco pack
+  - choco pack -v
   - choco install dvc -dv -s .
   - dvc version
-  - choco uninstall -fdv dvc.nuspec
+  - choco uninstall dvc
