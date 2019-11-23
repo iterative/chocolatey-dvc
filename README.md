@@ -1,4 +1,6 @@
-﻿## Summary
+[![Build Status](https://travis-ci.com/iterative/chocolatey-dvc.svg?branch=master)](https://travis-ci.com/iterative/chocolatey-dvc)
+
+## Summary
 How do I create packages? See https://chocolatey.org/docs/create-packages
 
 If you are submitting packages to the community feed (https://chocolatey.org)
