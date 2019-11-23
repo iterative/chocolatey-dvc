@@ -20,7 +20,6 @@
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/iterative/dvc</projectSourceUrl>
     <docsUrl>https://man.dvc.org</docsUrl>
-    <mailingListUrl>support@dvc.org</mailingListUrl>
     <bugTrackerUrl>https://github.com/iterative/dvc/issues</bugTrackerUrl>
     <tags>dvc git ml ds</tags>
     <summary>Git for data scientists - manage your code and data together</summary>
