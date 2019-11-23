@@ -1,6 +1,7 @@
 os: windows
 language: shell
 script:
+  - choco install python
   - choco pack -v
   - choco install dvc -dv -s .
   - dvc version
