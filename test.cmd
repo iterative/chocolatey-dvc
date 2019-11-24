@@ -1,4 +1,4 @@
-call choco install python || goto :error
+call choco install python --version 3.7.4 || goto :error
 call refreshenv || goto :error
 call python --version || goto :error
 call choco pack -v || goto :error
