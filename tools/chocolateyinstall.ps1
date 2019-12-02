@@ -1,3 +1,5 @@
+Set-PSDebug -Trace 1
+
 $ErrorActionPreference = 'Stop';
 
 Update-SessionEnvironment
