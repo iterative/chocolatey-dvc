@@ -22,18 +22,7 @@ finally
 
 Expand-Archive "dvc-$version.zip"
 
-Write-Host 'One'
-dir
-
-Set-Location -Path "dvc-$version"
-
-Write-Host 'Two'
-dir
-
-Set-Location -Path "dvc-$version"
-
-Write-Host 'Three'
-dir
+Set-Location -Path "dvc-$version\dvc-$version"
 
 New-Item dvc\utils\build.py
 Set-Content dvc\utils\build.py "PKG = 'choco'"
