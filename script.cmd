@@ -1,3 +1,4 @@
+echo on
 call choco install python --version 3.7.4 || goto :error
 call refreshenv || goto :error
 call python --version || goto :error
