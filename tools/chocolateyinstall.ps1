@@ -18,7 +18,7 @@ finally
   $client.Dispose()
 }
 
-Expand-Archive "dvc-$version.zip" -DestinationPath "dvc-$version"
+Expand-Archive "dvc-$version.zip"
 
 Set-Location -Path "dvc-$version"
 
