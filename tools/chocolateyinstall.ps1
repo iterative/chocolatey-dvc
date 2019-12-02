@@ -7,4 +7,21 @@ if ($proxy) {
   Write-Host "Setting CLI proxy: $proxy"
   $env:http_proxy = $env:https_proxy = $proxy
 }
-python -m pip install dvc[all]==$version
+
+$client = New-Object System.Net.WebClient
+try
+{
+  $client.DownloadFile("https://github.com/iterative/dvc/archive/$version.zip", "dvc-$version.zip")
+}
+finally
+{
+  $client.Dispose()
+}
+
+Expand-Archive "dvc-$version.zip" -DestinationPath "dvc-$version"
+
+Set-Location -Path "dvc-$version"
+
+"PKG = \"exe\"" | Out-File dvc\utils\build.py
+
+python -m pip install .[all]
