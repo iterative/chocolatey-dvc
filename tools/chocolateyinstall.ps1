@@ -1,5 +1,3 @@
-$ErrorActionPreference = 'Stop';
-
 Update-SessionEnvironment
 
 $version = '0.70.0'
