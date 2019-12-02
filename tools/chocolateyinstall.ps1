@@ -23,6 +23,6 @@ Expand-Archive "dvc-$version.zip"
 Set-Location -Path "dvc-$version"
 
 New-Item dvc\utils\build.py
-Set-Content dvc\utils\build.py PKG = "choco"
+Set-Content dvc\utils\build.py "PKG = 'choco'"
 
 python -m pip install .[all]
