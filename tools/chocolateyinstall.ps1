@@ -22,6 +22,6 @@ Expand-Archive "dvc-$version.zip" -DestinationPath "dvc-$version"
 
 Set-Location -Path "dvc-$version"
 
-"PKG = \"exe\"" | Out-File dvc\utils\build.py
+'PKG = "choco"' | Out-File dvc\utils\build.py
 
 python -m pip install .[all]
