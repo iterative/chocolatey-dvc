@@ -1,3 +1,5 @@
+$ErrorActionPreference = 'Stop';
+
 Update-SessionEnvironment
 
 $version = '0.70.0'
@@ -20,7 +22,11 @@ finally
 
 Expand-Archive "dvc-$version.zip"
 
+dir
+
 Set-Location -Path "dvc-$version"
+
+dir
 
 New-Item dvc\utils\build.py
 Set-Content dvc\utils\build.py "PKG = 'choco'"
