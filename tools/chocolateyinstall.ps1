@@ -1,5 +1,3 @@
-Set-PSDebug -Trace 1
-
 $ErrorActionPreference = 'Stop';
 
 Update-SessionEnvironment
@@ -24,10 +22,12 @@ finally
 
 Expand-Archive "dvc-$version.zip"
 
+Write-Host 'One'
 dir
 
 Set-Location -Path "dvc-$version"
 
+Write-Host 'Two'
 dir
 
 New-Item dvc\utils\build.py
