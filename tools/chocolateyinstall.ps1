@@ -18,7 +18,15 @@ finally
   $client.Dispose()
 }
 
-Expand-Archive "dvc-$version.zip"
+Add-Type -AssemblyName System.IO.Compression.FileSystem
+function Unzip
+{
+    param([string]$zipfile, [string]$outpath)
+
+    [System.IO.Compression.ZipFile]::ExtractToDirectory($zipfile, $outpath)
+}
+
+Unzip "dvc-$version.zip"
 
 Set-Location -Path "dvc-$version\dvc-$version"
 
