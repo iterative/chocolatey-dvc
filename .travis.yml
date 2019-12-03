@@ -2,6 +2,7 @@ os: windows
 language: shell
 script: ./script.cmd
 deploy:
+  skip_cleanup: true
   provider: script
   script:
     - choco apikey --key $CHOCO_API_KEY --source https://push.chocolatey.org/
