@@ -26,7 +26,7 @@ function Unzip
     [System.IO.Compression.ZipFile]::ExtractToDirectory($zipfile, $outpath)
 }
 
-Unzip "dvc-$version.zip"
+Unzip "dvc-$version.zip" "dvc-$version"
 
 Set-Location -Path "dvc-$version\dvc-$version"
 
