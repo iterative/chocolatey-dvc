@@ -1,7 +1,6 @@
 os: windows
 language: shell
-script: ./script.cmd
-deploy:
-  skip_cleanup: true
-  provider: script
-  script: deploy.sh
+script:
+  - ./script.cmd || travis_terminate 1
+  - choco apikey --key $CHOCO_API_KEY --source https://push.chocolatey.org/	|| travis_terminate 1
+  - choco push dvc*.nupkg -y --force --source https://push.chocolatey.org/ || travis_terminate 1
