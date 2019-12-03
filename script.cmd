@@ -7,8 +7,7 @@ call choco install dvc -dv -s . || goto :error
 call dvc version || goto :error
 call choco uninstall dvc || goto :error
 call choco apikey --key %CHOCO_API_KEY% --source https://push.chocolatey.org/ || goto :error
-call dir || goto :error
-call for %%pkg in (dvc*.nupkg) do (choco push %%pkg -y --force --source https://push.chocolatey.org/) || goto :error
+call for %%pkg in (dvc*.nupkg) do (choco push %%pkg -y --force --source https://push.chocolatey.org/)
 echo ====== DONE ======
 goto :EOF
 
