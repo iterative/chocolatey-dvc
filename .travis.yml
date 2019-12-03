@@ -1,3 +1,8 @@
 os: windows
 language: shell
 script: ./script.cmd
+deploy:
+  provider: script
+  script:
+    - choco apikey --key $CHOCO_API_KEY --source https://push.chocolatey.org/
+    - choco push dvc*.nupkg -y --force --source https://push.chocolatey.org/
