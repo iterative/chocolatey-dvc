@@ -21,7 +21,7 @@
     <projectSourceUrl>https://github.com/iterative/dvc</projectSourceUrl>
     <docsUrl>https://man.dvc.org</docsUrl>
     <bugTrackerUrl>https://github.com/iterative/dvc/issues</bugTrackerUrl>
-    <tags>dvc git ml ds</tags>
+    <tags>dvc git ml ds cross-platform cli foss</tags>
     <summary>Git for data scientists - manage your code and data together</summary>
     <description><![CDATA[
 **Data Version Control** or **DVC** is an **open-source** tool for data science and machine
