@@ -23,7 +23,7 @@
     <bugTrackerUrl>https://github.com/iterative/dvc/issues</bugTrackerUrl>
     <tags>dvc git ml ds cross-platform cli foss</tags>
     <summary>Git for data scientists - manage your code and data together</summary>
-    <description>
+    <description><![CDATA[
 **Data Version Control** or **DVC** is an **open-source** tool for data science and machine
 learning projects. Key features:
 
@@ -42,7 +42,7 @@ learning projects. Key features:
 which are being used frequently as both knowledge repositories and team ledgers.
 DVC also replaces both ad-hoc scripts to track, move, and deploy different model versions;
 as well as ad-hoc data file suffixes and prefixes.
-</description>
+]]></description>
     <releaseNotes>https://github.com/iterative/dvc/releases/latest</releaseNotes>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.3.3" />
