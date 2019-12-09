@@ -1,6 +1,9 @@
+$ErrorActionPreference = 'Stop';
+
 Update-SessionEnvironment
 
 $version = '0.70.0'
+$toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
 $proxy = Get-EffectiveProxy
 if ($proxy) {
@@ -10,7 +13,7 @@ if ($proxy) {
 
 Get-ChocolateyWebFile -PackageName 'dvc' -Url "https://github.com/iterative/dvc/archive/$version.zip" -FileFullPath "$toolsDir\dvc-$version.zip"
 
-Get-ChocolateyUnzip -FileFullPath "$toolsDir\dvc-$version.zip" -Destination $toolsDir
+Get-ChocolateyUnzip -FileFullPath "$toolsDir\dvc-$version.zip" -Destination "$toolsDir"
 
 Set-Location -Path "dvc-$version"
 
