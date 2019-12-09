@@ -1,7 +1,10 @@
 Update-SessionEnvironment
 
 $version = '0.70.0'
+$url = "https://github.com/iterative/dvc/archive/$version.zip"
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+$zipFile = "$toolsDir\dvc-$version.zip"
+$projDir = "$toolsDir\dvc-$version"
 
 $proxy = Get-EffectiveProxy
 if ($proxy) {
@@ -9,20 +12,8 @@ if ($proxy) {
   $env:http_proxy = $env:https_proxy = $proxy
 }
 
-Write-Host "Downloading zip"
-Get-ChocolateyWebFile -PackageName 'dvc' -Url "https://github.com/iterative/dvc/archive/$version.zip" -FileFullPath "$toolsDir\dvc-$version.zip"
-
-Write-Host "Unpacking zip"
-Get-ChocolateyUnzip -FileFullPath "$toolsDir\dvc-$version.zip" -Destination "$toolsDir"
-
-Write-Host "Listing dir"
-dir "$toolsDir\dvc-$version"
-
-Write-Host "Changing dir"
-Set-Location -Path "$toolsDir\dvc-$version"
-
-Write-Host "Creating build.py"
+Get-ChocolateyWebFile -PackageName 'dvc' -Url "$url" -FileFullPath "$zipFile"
+Get-ChocolateyUnzip -FileFullPath "$zipFile" -Destination "$toolsDir"
+Set-Location -Path "$projDir"
 New-Item -Path "dvc\utils" -Name "build.py" -ItemType "file" -Value "PKG = 'choco'"
-
-Write-Host "Installing from pip"
 python -m pip install '.[all]'
