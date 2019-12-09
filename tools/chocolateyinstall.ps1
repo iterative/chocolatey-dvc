@@ -1,5 +1,3 @@
-$ErrorActionPreference = 'Stop';
-
 Update-SessionEnvironment
 
 $version = '0.70.0'
@@ -27,4 +25,4 @@ Write-Host "Creating build.py"
 New-Item -Path "dvc\utils" -Name "build.py" -ItemType "file" -Value "PKG = 'choco'"
 
 Write-Host "Installing from pip"
-python -m pip install .[all]
+python -m pip install '.[all]'
