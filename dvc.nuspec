@@ -6,13 +6,13 @@
     <id>dvc</id>
     <version>0.70.0</version>
     <packageSourceUrl>https://github.com/iterative/chocolatey-dvc</packageSourceUrl>
-    <owners>DVC team</owners>
+    <owners>Ruslan Kuprieiev</owners>
     <!-- ============================== -->
 
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <!-- This section is about the software itself -->
     <title>DVC</title>
-    <authors>DVC team</authors>
+    <authors>Dmitry Petrov</authors>
     <projectUrl>https://dvc.org</projectUrl>
     <iconUrl>https://rawcdn.githack.com/iterative/dvc.org/87181d735a2d8cc5fcd3a22441db6169749d5012/static/img/logo-owl-readme.png</iconUrl>
     <!-- <copyright>Year Software Vendor</copyright> -->
