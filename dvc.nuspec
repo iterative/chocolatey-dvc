@@ -6,7 +6,7 @@
     <id>dvc</id>
     <version>0.70.0</version>
     <packageSourceUrl>https://github.com/iterative/chocolatey-dvc</packageSourceUrl>
-    <owners>Ruslan Kuprieiev</owners>
+    <owners>efiop</owners>
     <!-- ============================== -->
 
     <!-- == SOFTWARE SPECIFIC SECTION == -->
