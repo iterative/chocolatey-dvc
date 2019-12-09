@@ -17,8 +17,11 @@ Get-ChocolateyWebFile -PackageName 'dvc' -Url "https://github.com/iterative/dvc/
 Write-Host "Unpacking zip"
 Get-ChocolateyUnzip -FileFullPath "$toolsDir\dvc-$version.zip" -Destination "$toolsDir"
 
+Write-Host "Listing dir"
+dir "$toolsDir\dvc-$version"
+
 Write-Host "Changing dir"
-Set-Location -Path "dvc-$version"
+Set-Location -Path "$toolsDir\dvc-$version"
 
 Write-Host "Creating build.py"
 New-Item -Path "dvc\utils" -Name "build.py" -ItemType "file" -Value "PKG = 'choco'"
