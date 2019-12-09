@@ -14,7 +14,7 @@
     <title>DVC</title>
     <authors>DVC team</authors>
     <projectUrl>https://dvc.org</projectUrl>
-    <!--<iconUrl>http://cdn.rawgit.com/__REPLACE_YOUR_REPO__/master/icons/dvc.png</iconUrl>-->
+    <iconUrl>https://rawcdn.githack.com/iterative/dvc.org/87181d735a2d8cc5fcd3a22441db6169749d5012/static/img/logo-owl-readme.png</iconUrl>
     <!-- <copyright>Year Software Vendor</copyright> -->
     <licenseUrl>https://github.com/iterative/dvc/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
