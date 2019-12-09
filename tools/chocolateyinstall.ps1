@@ -8,27 +8,11 @@ if ($proxy) {
   $env:http_proxy = $env:https_proxy = $proxy
 }
 
-$client = New-Object System.Net.WebClient
-try
-{
-  $client.DownloadFile("https://github.com/iterative/dvc/archive/$version.zip", "dvc-$version.zip")
-}
-finally
-{
-  $client.Dispose()
-}
+Get-ChocolateyWebFile -PackageName 'dvc' -Url "https://github.com/iterative/dvc/archive/$version.zip" -FileFullPath "$toolsDir\dvc-$version.zip"
 
-Add-Type -AssemblyName System.IO.Compression.FileSystem
-function Unzip
-{
-    param([string]$zipfile, [string]$outpath)
+Get-ChocolateyUnzip -FileFullPath "$toolsDir\dvc-$version.zip" -Destination $toolsDir
 
-    [System.IO.Compression.ZipFile]::ExtractToDirectory($zipfile, $outpath)
-}
-
-Unzip "dvc-$version.zip" "dvc-$version"
-
-Set-Location -Path "dvc-$version\dvc-$version"
+Set-Location -Path "dvc-$version"
 
 New-Item -Path "dvc\utils" -Name "build.py" -ItemType "file" -Value "PKG = 'choco'"
 
