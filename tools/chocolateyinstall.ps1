@@ -17,3 +17,4 @@ Get-ChocolateyUnzip -FileFullPath "$zipFile" -Destination "$toolsDir"
 Set-Location -Path "$projDir"
 New-Item -Path "dvc\utils" -Name "build.py" -ItemType "file" -Value "PKG = 'choco'"
 python -m pip install '.[all]'
+python -m dvc version
