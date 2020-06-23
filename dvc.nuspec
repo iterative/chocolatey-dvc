@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>dvc</id>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <packageSourceUrl>https://github.com/iterative/chocolatey-dvc</packageSourceUrl>
     <owners>efiop</owners>
     <!-- ============================== -->
@@ -46,6 +46,7 @@ as well as ad-hoc data file suffixes and prefixes.
     <releaseNotes>https://github.com/iterative/dvc/releases/latest</releaseNotes>
     <dependencies>
       <dependency id="Python" version="[3.5, 3.8]" />
+      <dependency id="git" />
     </dependencies>
   </metadata>
   <files>
