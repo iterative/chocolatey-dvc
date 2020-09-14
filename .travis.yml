@@ -3,9 +3,8 @@ language: shell
 script:
   - ./script.cmd || travis_terminate 1
 deploy:
-  skip_cleanup: true
   provider: script
   on:
     branch: master
     repo: iterative/chocolatey-dvc
-  script: cmd.exe deploy.cmd
+  script: ./deploy.cmd
