@@ -4,6 +4,7 @@ script:
   - ./script.cmd || travis_terminate 1
 deploy:
   provider: script
+  skip_cleanup: true
   on:
     branch: master
     repo: iterative/chocolatey-dvc
