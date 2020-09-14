@@ -8,4 +8,4 @@ deploy:
   on:
     branch: master
     repo: iterative/chocolatey-dvc
-  script: ./deploy.cmd || travis_terminate 1
+  script: cmd.exe deploy.cmd
