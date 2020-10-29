@@ -13,5 +13,10 @@ jobs:
       with:
         python-version: 3.7
     - name: Build
-      run: build.cmd
       shell: cmd
+      run: choco pack -v
+    - name: Publish
+      shell: cmd
+      run: |
+        choco apikey --key $CHOCO_API_KEY --source https://push.chocolatey.org/
+        choco push dvc*.nupkg --source https://push.chocolatey.org/
