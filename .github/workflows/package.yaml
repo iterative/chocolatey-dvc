@@ -13,7 +13,7 @@ jobs:
       shell: cmd
       run: choco pack -v
     - name: Publish
-      if: ${{ github.event_name == 'push' && github.ref == 'ref/heads/master' }}
+      if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/master' }}
       shell: cmd
       run: |
         choco apikey --key $CHOCO_API_KEY --source https://push.chocolatey.org/
