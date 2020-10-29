@@ -1,7 +1,7 @@
 os: windows
 language: shell
 script:
-  - ./script.cmd || travis_terminate 1
+  - ./build.cmd || travis_terminate 1
 #deploy:
 #  provider: script
 #  skip_cleanup: true
