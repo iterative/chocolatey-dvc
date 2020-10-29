@@ -8,7 +8,8 @@ if [ ! $LATEST ]; then
 	LATEST=$(./latest.sh)
 fi
 
-GHAPI_URL="https://api.github.com/repos/iterative/dvc/releases/latest"
+PROJECT="iterative/dvc"
+GHAPI_URL="https://api.github.com/repos/$PROJECT/releases/latest"
 LATEST=$(curl --silent $GHAPI_URL | jq -r .tag_name)
 ZIP="$LATEST.zip"
 ZIP_URL="https://github.com/$PROJECT/archive/$ZIP"
