@@ -19,6 +19,3 @@ CHECKSUM=$(sha256sum $LATEST.zip | cut -d " " -f1)
 
 sed -i 's/^\$version.*$/$version = '"'$LATEST'"'/g' tools/chocolateyinstall.ps1
 sed -i 's/<version>.*<\/version>/<version>'$LATEST'<\/version>/g' dvc.nuspec
-
-git add tools/chocolateyinstall.ps1 dvc.nuspec
-git commit -m "dvc $LATEST"
