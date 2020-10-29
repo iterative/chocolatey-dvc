@@ -14,7 +14,9 @@ jobs:
       run: choco pack -v
     - name: Publish
       if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/master' }}
-      shell: cmd
+      shell: bash
+      env:
+        CHOCO_API_KEY: ${{ secrets.CHOCO_API_KEY }}
       run: |
         choco apikey --key $CHOCO_API_KEY --source https://push.chocolatey.org/
         choco push dvc*.nupkg --source https://push.chocolatey.org/
