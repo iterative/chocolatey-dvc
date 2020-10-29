@@ -9,7 +9,7 @@ jobs:
     - uses: actions/checkout@v2
     - name: get latest dvc version
       id: latest
-      run: echo "::set-output name=version::$(./latest.sh)"
+      run: echo "::set-output name=version::$(bash latest.sh)"
     - name: try update
       id: update
       run: |
