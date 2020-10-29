@@ -26,4 +26,4 @@ jobs:
       if: ${{ steps.update.outputs.changes != '' }}
       uses: peter-evans/create-pull-request@v3
       with:
-        commit-message: dvc ${{ steps.latest.version }}
+        commit-message: dvc ${{ steps.latest.outputs.version }}
