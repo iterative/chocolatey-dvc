@@ -1,0 +1,13 @@
+name: Build package
+on:
+  push:
+    branches:
+    - master
+jobs:
+  windows:
+    runs-on: windows-2019
+    steps:
+    - uses: actions/checkout@v1
+    - name: Build
+      run: build.cmd
+      shell: cmd
