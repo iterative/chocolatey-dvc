@@ -18,4 +18,5 @@ wget $ZIP_URL
 CHECKSUM=$(sha256sum $LATEST.zip | cut -d " " -f1)
 
 sed -i 's/^\$version.*$/$version = '"'$LATEST'"'/g' tools/chocolateyinstall.ps1
+sed -i 's/^\$checksum.*$/$checksum = '"'$CHECKSUM'"'/g' tools/chocolateyinstall.ps1
 sed -i 's/<version>.*<\/version>/<version>'$LATEST'<\/version>/g' dvc.nuspec
