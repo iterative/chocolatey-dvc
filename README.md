@@ -1,5 +1,3 @@
-[![Build Status](https://travis-ci.com/iterative/chocolatey-dvc.svg?branch=master)](https://travis-ci.com/iterative/chocolatey-dvc)
-
 Data Version Control or DVC is an open-source tool for data science and machine learning projects.
 
 ## Features:
