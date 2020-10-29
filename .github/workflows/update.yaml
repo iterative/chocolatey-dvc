@@ -1,7 +1,7 @@
 name: Update package
 on:
   schedule:
-    - cron: '*/15 * * * *'
+    - cron: '*/5 * * * *'
 jobs:
   update:
     runs-on: ubuntu-16.04
@@ -18,4 +18,5 @@ jobs:
     - name: create PR
       if: ${{ steps.update.changes != '' }}
       uses: peter-evans/create-pull-request@v3
-      commit-message: dvc ${{ steps.latest.version }}
+      with:
+        commit-message: dvc ${{ steps.latest.version }}
