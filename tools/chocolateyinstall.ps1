@@ -1,8 +1,8 @@
 Update-SessionEnvironment
 
-$version = '2.0.12'
+$version = '2.0.13'
 $url = "https://github.com/iterative/dvc/archive/$version.zip"
-$checksum = 'ea40ee9c2ca528417395d46a8a5d8feb855a0f5945ffc0fed59b03f8941e2912'
+$checksum = '826a20efc15dfff0f7df2789079b009e1b1888483be9a2032303ab8823284e47'
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $zipFile = "$toolsDir\dvc-$version.zip"
 $projDir = "$toolsDir\dvc-$version"
