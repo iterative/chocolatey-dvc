@@ -11,11 +11,11 @@ fi
 PROJECT="iterative/dvc"
 GHAPI_URL="https://api.github.com/repos/$PROJECT/releases/latest"
 LATEST=$(curl --silent $GHAPI_URL | jq -r .tag_name)
-ZIP="$LATEST.zip"
-ZIP_URL="https://github.com/$PROJECT/archive/$ZIP"
+TAR="dvc-$LATEST.tar.gz"
+TAR_URL="https://pypi.io/packages/source/d/dvc/$TAR"
 
-wget $ZIP_URL
-CHECKSUM=$(sha256sum $LATEST.zip | cut -d " " -f1)
+wget $TAR_URL
+CHECKSUM=$(sha256sum $TAR | cut -d " " -f1)
 
 sed -i 's/^\$version.*$/$version = '"'$LATEST'"'/g' tools/chocolateyinstall.ps1
 sed -i 's/^\$checksum.*$/$checksum = '"'$CHECKSUM'"'/g' tools/chocolateyinstall.ps1
