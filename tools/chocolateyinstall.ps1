@@ -1,8 +1,8 @@
 Update-SessionEnvironment
 
-$version = '2.12.0'
+$version = '2.12.1'
 $url = "https://pypi.io/packages/source/d/dvc/dvc-$version.tar.gz"
-$checksum = 'e06692917227288776d97f20e094bdd5f3800ba7002fb8db42577a5c08b0febe'
+$checksum = '477a06d4ae819d034ab747ae14fcd1ac97f2c5c6ff54c16d911217ca5937b18a'
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $tarFile = "$toolsDir\dvc-$version.tar.gz"
 $projDir = "$toolsDir\dvc-$version"
