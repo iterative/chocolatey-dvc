@@ -13,7 +13,7 @@ jobs:
       shell: cmd
       run: choco pack -v
     - name: Publish
-      if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/master' }}
+      if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
       shell: bash
       env:
         CHOCO_API_KEY: ${{ secrets.CHOCO_API_KEY }}
