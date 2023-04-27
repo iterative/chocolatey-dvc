@@ -14,13 +14,13 @@ $projDir = "$toolsDir\dvc-$version"
 Get-ChocolateyWebFile -PackageName 'dvc' -Url "$url" -FileFullPath "$targzFile" -ChecksumType sha256 -Checksum "$checksum"
 Get-ChocolateyUnzip -FileFullPath "$targzFile" -Destination "$toolsDir"
 if (Test-Path "$tarFile") {
-  # workaround for https://github.com/chocolatey/choco/pull/1026
-  # inspired by https://github.com/chocolatey-community/chocolatey-packages/blob/d00d111cdc6e638146359073417f9c1d57f8da84/automatic/kubernetes-cli/tools/chocolateyInstall.ps1#L15
+  # ChocolateyUnzip can't handle tar.gz in one pass right now,
+  # see https://github.com/chocolatey/choco/pull/1026 for more details.
+  # Inspired by https://github.com/chocolatey-community/chocolatey-packages/blob/d00d111cdc6e638146359073417f9c1d57f8da84/automatic/kubernetes-cli/tools/chocolateyInstall.ps1#L15
   Get-ChocolateyUnzip -FileFullPath "$tarFile" -Destination "$toolsDir"
   Remove-Item "$tarFile"
 }
 
-Get-ChildItem -Path "$toolsDir" -Depth 2
 Set-Location -Path "$projDir"
 New-Item -Path "dvc\utils" -Name "build.py" -ItemType "file" -Value "PKG = 'choco'" -Force
 
