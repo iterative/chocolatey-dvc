@@ -12,7 +12,7 @@ $projDir = "$toolsDir\dvc-$version"
 
 Get-ChocolateyWebFile -PackageName 'dvc' -Url "$url" -FileFullPath "$tarFile" -ChecksumType sha256 -Checksum "$checksum"
 Get-ChocolateyUnzip -FileFullPath "$tarFile" -Destination "$toolsDir"
-Get-ChildItem -Path "$toolsDir"
+Get-ChildItem -Path "$toolsDir" -Depth 2
 Set-Location -Path "$projDir"
 New-Item -Path "dvc\utils" -Name "build.py" -ItemType "file" -Value "PKG = 'choco'"
 python -m pip install --upgrade pip
