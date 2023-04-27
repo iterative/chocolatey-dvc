@@ -7,7 +7,7 @@ $version = '2.55.0'
 $url = "https://pypi.io/packages/source/d/dvc/dvc-$version.tar.gz"
 $checksum = '3ee239ae1e946fe1ac8999fc829ccb570e03c248938e5b8235f5647cf1dce806'
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$tarFile = "$toolsDir\dvc-$version.tar.gz"
+$tarFile = "$toolsDir\dvc-$version.tar"
 $targzFile = "$tarFile.gz"
 $projDir = "$toolsDir\dvc-$version"
 
