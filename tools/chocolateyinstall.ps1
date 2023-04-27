@@ -1,5 +1,6 @@
 Update-SessionEnvironment
 
+Set-PSDebug -Trace 1
 $ErrorActionPreference = "Stop"
 
 $version = '2.55.0'
