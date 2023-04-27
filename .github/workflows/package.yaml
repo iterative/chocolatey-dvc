@@ -12,6 +12,12 @@ jobs:
     - name: Build
       shell: cmd
       run: choco pack -v
+    - name: Install
+      shell: cmd
+      run: choco install dvc --debug --verbose --source .
+    - name: Test
+      shell: cmd
+      run: dvc doctor
     - name: Publish
       if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
       shell: bash
