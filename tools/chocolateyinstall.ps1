@@ -22,7 +22,8 @@ if (Test-Path "$tarFile") {
 
 Get-ChildItem -Path "$toolsDir" -Depth 2
 Set-Location -Path "$projDir"
-New-Item -Path "dvc\utils" -Name "build.py" -ItemType "file" -Value "PKG = 'choco'"
+New-Item -Path "dvc\utils" -Name "build.py" -ItemType "file" -Value "PKG = 'choco'" -Force
+
 python -m pip install --upgrade pip
 # NOTE: not installing pyarrow, as it doesn't have wheels for Windows Server 2012,
 # see https://gist.github.com/choco-bot/d72732943836c947633625b1428a3f2c#file-install-txt-L1292
