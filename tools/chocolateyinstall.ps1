@@ -3,9 +3,9 @@ Update-SessionEnvironment
 Set-PSDebug -Trace 1
 $ErrorActionPreference = "Stop"
 
-$version = '2.58.1'
+$version = '2.58.2'
 $url = "https://pypi.io/packages/source/d/dvc/dvc-$version.tar.gz"
-$checksum = '3d4597b11f17fa6810ac7c51cae6417b62c14757db7a9166dfbee0b711bc1d97'
+$checksum = 'd40fff99b76719d1d524f103ad9dc64141bb363492abb9b8a61c6e70efe5a4dc'
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $tarFile = "$toolsDir\dvc-$version.tar"
 $targzFile = "$tarFile.gz"
