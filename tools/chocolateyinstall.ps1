@@ -22,7 +22,7 @@ if (Test-Path "$tarFile") {
 }
 
 Set-Location -Path "$projDir"
-New-Item -Path "dvc\utils" -Name "build.py" -ItemType "file" -Value "PKG = 'choco'" -Force
+New-Item -Path "dvc" -Name "_build.py" -ItemType "file" -Value "PKG = 'choco'" -Force
 
 python -m pip install --upgrade pip
 # NOTE: not installing pyarrow, as it doesn't have wheels for Windows Server 2012,
