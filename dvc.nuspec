@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>dvc</id>
-    <version>3.55.0</version>
+    <version>3.55.1</version>
     <packageSourceUrl>https://github.com/iterative/chocolatey-dvc</packageSourceUrl>
     <owners>efiop</owners>
     <!-- ============================== -->
