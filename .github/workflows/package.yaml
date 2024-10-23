@@ -15,8 +15,6 @@ jobs:
     - name: Install
       shell: cmd
       run: choco install dvc --debug --verbose --source "'.;https://community.chocolatey.org/api/v2/'"
-    - if: failure()
-      run: cat C:\python312_msi_install.log
     - name: Test
       shell: cmd
       run: |
