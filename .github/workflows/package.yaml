@@ -2,7 +2,7 @@ name: Build package
 on: [push, pull_request]
 jobs:
   windows:
-    runs-on: windows-2019
+    runs-on: windows-2022
     steps:
     - uses: actions/checkout@v4
     - name: Set up Python 3.12
