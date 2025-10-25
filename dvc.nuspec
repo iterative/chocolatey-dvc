@@ -45,7 +45,7 @@ as well as ad-hoc data file suffixes and prefixes.
 ]]></description>
     <releaseNotes>https://github.com/iterative/dvc/releases/latest</releaseNotes>
     <dependencies>
-      <dependency id="Python" version="[3.9, 3.14)" />
+      <dependency id="Python" version="[3.9, 3.15)" />
     </dependencies>
   </metadata>
   <files>
